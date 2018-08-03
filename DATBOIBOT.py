@@ -11,14 +11,13 @@ from contextlib import suppress
 options = Options()
 options.set_headless(headless=True)
 #email address goes here
-userName = 'ENTERYOUREMAILADDRESSHERE'
+userName = open("myemail.txt").read().strip()
 password = open("mypassword.txt").read().strip()
 #You can change the phrase before the tweet
 phraseToTweet = 'O SHIT WADDUP'
 
 twitter_login_url = 'https://twitter.com/login'
 
-#This 
 def OpenTwitterAndLogIn(username, password):
     browser.get(twitter_login_url)
     try:
